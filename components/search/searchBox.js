@@ -10,7 +10,11 @@ export default function SearchBox(props) {
             </span>
             <input id="algolia_search" onChange={(e) => refine(e.currentTarget.value)} className="input w-full h-full border-0 px-1 py-2.5 focus:outline-0 font-Poppins text-hmDark text-sm" type="search" placeholder="Search..." />
 
-            <label className="cursor-pointer mr-5 border border-hmsectionTitle/20 rounded bg-hmfooterBg font-semibold px-3" htmlFor="searchModal">x</label>
+            <label className="kbd cursor-pointer mr-5" htmlFor="searchModal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" className="fill-hmGreen">
+                    <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/>
+                </svg>
+            </label>
         </div>
     )
 }

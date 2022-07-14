@@ -35,7 +35,7 @@ export default function Post({post,slug}) {
                 {post.featuredImage != null &&
                     <img src={post.featuredImage.node.mediaItemUrl+"?force_format=webp&w=1920&h=600"} alt={post.title} title={post.title} width="1920" height="600" className="object-cover w-full h-[600px] rounded-tl-2xl rounded-tr-2xl" />
                 }
-                <div className="container mx-auto z-40 relative px-1.5 lg:px-0 lg:text-left text-center">
+                <div className="container mx-auto z-10 relative px-1.5 lg:px-0 lg:text-left text-center">
                     <h1 className="py-5 text-2xl md:text-4xl font-semibold text-white absolute bottom-10">{post.title}</h1>
                 </div>
             </section>

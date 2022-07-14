@@ -8,8 +8,8 @@ export default function SearchModal() {
     return (
         <div>
             <input type="checkbox" id="searchModal" className="modal-toggle" />
-            <div className="modal">
-                <div className="flex flex-col w-1/3 relative bg-white rounded-lg shadow">
+            <div className="modal z-20">
+                <div className="flex flex-col lg:w-1/3 relative bg-white rounded-lg shadow">
                     <div className="flex flex-col sm:flex-row">
                         <InstantSearch searchClient={searchClient} indexName="wp_searchable_posts">
                             <div className="flex flex-col w-full">

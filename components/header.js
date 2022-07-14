@@ -2,6 +2,7 @@ import '@docsearch/css';
 import Link from "next/link";
 import ContactModal from "./contact";
 import SearchModal from "./search";
+import MobilModal from "./mobilMenu";
 export default function Header() {
   return (
       <div className="fixed top-0 z-20 w-full bg-white shadow">
@@ -9,7 +10,7 @@ export default function Header() {
               <div className="navbar p-4 w-full">
                   <div className="navbar-start">
                       <div className="dropdown">
-                          <label  className="btn btn-ghost lg:hidden">
+                          <label  className="btn btn-ghost lg:hidden" htmlFor="MobilModal">
                               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                    stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -90,7 +91,7 @@ export default function Header() {
                       </ul>
                   </div>
                   <div className="navbar-end">
-                      <label className="flex flex-row cursor-pointer p-2 w-1/3 text-gray-900 bg-gray-50 rounded-lg border border-hmDark/50 hover:border-hmDark transition ease-in sm:text-sm"  htmlFor="searchModal">
+                      <label className="md:flex flex-row hidden cursor-pointer p-2 w-1/3 text-gray-900 bg-gray-50 rounded-lg border border-hmDark/50 hover:border-hmDark transition ease-in sm:text-sm"  htmlFor="searchModal">
                           <span className="pr-3">
                               <svg className="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                   <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
@@ -99,11 +100,19 @@ export default function Header() {
                           <span
                           className="pr-5 min-w-fit"> Search... </span>
                       </label>
+                      <label className="flex flex-row md:hidden cursor-pointer p-2 text-gray-900"  htmlFor="searchModal">
+                          <span className="pr-3">
+                              <svg className="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                  <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
+                              </svg>
+                          </span>
+                      </label>
                   </div>
               </div>
           </div>
           <ContactModal/>
           <SearchModal/>
+          <MobilModal/>
       </div>
   )
 }

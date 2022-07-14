@@ -2,10 +2,14 @@ export default function ContactModal() {
     return (
         <div>
             <input type="checkbox" id="contactModal" className="modal-toggle" />
-            <div className="modal">
+            <label htmlFor="contactModal" className="modal overflow-y-scroll items-start md:items-center md:overflow-y-hidden">
                 <div className="flex flex-col relative bg-white md:rounded-lg shadow max-w-7xl">
                     <div className="flex flex-col sm:flex-row md:pb-10 px-5 md:px-10">
-                        <label htmlFor="contactModal" className="btn btn-sm btn-circle border-0 absolute right-2 top-2">✕</label>
+                        <kbd className="kbd cursor-pointer absolute right-2 top-2" htmlFor="contactModal">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" className="fill-hmGreen">
+                                <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/>
+                            </svg>
+                        </kbd>
                         <div className="w-full sm:w-1/2 lg:grid justify-center py-5 md:py-20">
                             <h5 className="text-hmGreen text-7xl mb-10 text-center">Say Hi,</h5>
                             <p className="text-hmDark text-center text-px-20  mb-5">We’re here to answer
@@ -80,7 +84,7 @@ export default function ContactModal() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </label>
         </div>
     )
 }

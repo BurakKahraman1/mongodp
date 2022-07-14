@@ -1,5 +1,5 @@
-import { useHits,useCurrentRefinements } from "react-instantsearch-hooks-web"
-import Link from "next/link";
+import { useHits } from "react-instantsearch-hooks-web"
+
 export default function Hits(props) {
     const { hits, results } = useHits(props);
     return (
@@ -8,9 +8,7 @@ export default function Hits(props) {
                 <ul className="overflow-y-scroll h-[400px]">
                     {hits.map((hit) => (
                         <li className="flex bg-white border-hmDark/90 rounded shadow-sm mb-3 hover:shadow-md transition ease-in" key={hit.post_id}>
-                            <Link href={"/post/"+hit.post_name}>
-                                <a className="w-full h-full p-3">{hit.post_title}</a>
-                            </Link>
+                            <a href={"/post/"+hit.post_name} className="w-full h-full p-3">{hit.post_title}</a>
                         </li>
                     ))}
                 </ul>
