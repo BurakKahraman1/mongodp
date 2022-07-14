@@ -31,7 +31,7 @@ export default function Post({post,slug}) {
                 <meta property="twitter:image" content={post.seo.opengraphImage?.mediaItemUrl}/>
             </Head>
             <Header/>
-            <section className=" min-h-[100px] mb-5 relative">
+            <section className="Slider min-h-[100px] mb-5 relative">
                 {post.featuredImage != null &&
                     <img src={post.featuredImage.node.mediaItemUrl+"?force_format=webp&w=1920&h=600"} alt={post.title} title={post.title} width="1920" height="600" className="object-cover w-full h-[600px] rounded-tl-2xl rounded-tr-2xl" />
                 }
