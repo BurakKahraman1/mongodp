@@ -11,7 +11,7 @@ export default function Home({mData}) {
             <title>{mData.companyName}</title>
         </Head>
         <Header/>
-        <section className="w-full h-screen bg-top bg-cover bg-no-repeat bg-[url('https://awnhwjglcr.cloudimg.io/cansariyar.com/works/demo-wp/wp-content/uploads/2022/06/bg-01.jpg?force_format=webp&w=1920&h=600')]">
+        <section className="Slider relative w-full h-screen bg-top bg-cover bg-no-repeat bg-[url('https://awnhwjglcr.cloudimg.io/cansariyar.com/works/demo-wp/wp-content/uploads/2022/06/bg-01.jpg?force_format=webp&w=1920&h=600')]">
             <div
                 className="container mx-auto z-10 relative h-full flex flex-col justify-end sm:justify-center pb-10 px-10">
                 <h1 className="text-hmGreen text-3xl text-center font-bold sm:text-5xl sm:w-1/2 sm:mx-auto leading-normal">Pay
