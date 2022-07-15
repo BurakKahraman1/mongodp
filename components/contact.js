@@ -12,8 +12,7 @@ export default function ContactModal() {
                         </kbd>
                         <div className="w-full sm:w-1/2 lg:grid justify-center py-5 md:py-20">
                             <h5 className="text-hmGreen text-7xl mb-10 text-center">Say Hi,</h5>
-                            <p className="text-hmDark text-center text-px-20  mb-5">We’re here to answer
-                                any question you may have.</p>
+                            <p className="text-hmDark text-center text-px-20  mb-5">We’re here to answer any question you may have.</p>
                             <div className="flex flex-col lg:flex-row">
                                 <div className="px-5 mb-5 lg:mb-0">
                                     <span className="font-bold text-hmsectionTitle text-px-15 mb-2">Address</span>
@@ -36,36 +35,21 @@ export default function ContactModal() {
                             <form className="flex flex-col sm:px-20">
                                 <div className="grid grid-cols-2 mb-5">
                                     <div className="mr-5">
-                                        <label
-                                            className="block mb-2 text-sm font-medium text-gray-900">Your
-                                            Name</label>
-                                        <input type="text"
-                                               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                               placeholder="Your Name" required />
+                                        <label  className="block mb-2 text-sm font-medium text-gray-900">Your Name</label>
+                                        <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Your Name" required />
                                     </div>
                                     <div>
-                                        <label
-                                            className="block mb-2 text-sm font-medium text-gray-900">Your
-                                            Surname</label>
-                                        <input type="text"
-                                               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                               placeholder="Your Surname" required/>
+                                        <label className="block mb-2 text-sm font-medium text-gray-900">Your Surname</label>
+                                        <input type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Your Surname" required/>
                                     </div>
                                 </div>
                                 <div className="mb-5">
-                                    <label className="block mb-2 text-sm font-medium text-gray-900">Your
-                                        E-Mail</label>
-                                    <input type="email"
-                                           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                           placeholder="example@domain.com" required/>
+                                    <label className="block mb-2 text-sm font-medium text-gray-900">Your  E-Mail</label>
+                                    <input type="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "  placeholder="info@healthmonde.net" required/>
                                 </div>
                                 <div className="mb-5">
-                                    <label htmlFor="message"
-                                           className="block mb-2 text-sm font-medium text-gray-900">Your
-                                        message</label>
-                                    <textarea id="message" rows="4"
-                                              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                              placeholder="Leave a comment..."></textarea>
+                                    <label htmlFor="message"  className="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+                                    <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a comment..."></textarea>
                                 </div>
                                 <div className="grid grid-cols-2 mb-5 justify-center items-center">
                                     <div className="flex items-center h-10">
