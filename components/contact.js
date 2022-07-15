@@ -59,8 +59,7 @@ export default function ContactModal() {
                                         </label>
                                     </div>
                                     <div className="grid justify-items-end  h-10">
-                                        <button type="submit"
-                                                className="text-white bg-hmGreen hover:bg-hmGreen/80 hover:shadow-lg transition ease-in font-medium rounded-lg text-sm px-4 py-2">Search
+                                        <button type="submit" className="text-white bg-hmGreen hover:bg-hmGreen/80 hover:shadow-lg transition ease-in font-medium rounded-lg text-sm px-4 py-2">Send
                                         </button>
                                     </div>
                                 </div>
