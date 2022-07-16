@@ -8,6 +8,7 @@ import Link from "next/link";
 import Moment from "react-moment";
 import Pagination from "../../components/pagination";
 import BlogRightBarMenu from "../../components/menu/blogRightBarMenu";
+import Image from "next/image";
 
 export default function Index({mData,pageNo,posts}) {
     const nodes = posts.nodes;
@@ -27,8 +28,8 @@ export default function Index({mData,pageNo,posts}) {
                                     <div className="w-full h-[200px]">
                                         <Link href={"/post/"+post.slug}>
                                             <a>
-                                                {post.featuredImage != null && <img src={post.featuredImage.node.mediaItemUrl+"?force_format=webp&w=300&h=200"} alt={post.title} title={post.title} width="300" height="200" className="object-cover w-full  h-[200px] rounded-tl-2xl rounded-tr-2xl" />}
-                                                {post.featuredImage == null && <img src="https://dummyimage.com/300x200/ffffff/000000&text=No+Image" alt={post.title} title={post.title} width="300" height="200" className="object-cover w-full  h-[200px] rounded-tl-2xl rounded-tr-2xl" />}
+                                                {post.featuredImage != null && <Image src={post.featuredImage.node.mediaItemUrl+"?force_format=webp&w=300&h=200"} alt={post.title} title={post.title} width="300" height="200" className="object-cover w-full  h-[200px] rounded-tl-2xl rounded-tr-2xl" />}
+                                                {post.featuredImage == null && <Image src="https://dummyimage.com/300x200/ffffff/000000&text=No+Image" alt={post.title} title={post.title} width="300" height="200" className="object-cover w-full  h-[200px] rounded-tl-2xl rounded-tr-2xl" />}
                                             </a>
                                         </Link>
                                     </div>

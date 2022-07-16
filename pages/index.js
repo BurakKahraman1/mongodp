@@ -3,6 +3,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import Image from "next/image";
 
 export default function Home({mData}) {
   return (
@@ -247,7 +248,7 @@ export default function Home({mData}) {
                     <label className="w-full mt-10 py-2.5 cursor-pointer font-Poppins rounded-full lg:w-3/6 text-white text-center bg-hmGreen hover:shadow-lg transition ease-in transition ease-in" htmlFor="contactModal">Request a Quote</label>
                 </div>
                 <div className="w-full lg:w-1/2 h-auto rounded-tr-md rounded-br-md">
-                    <img src="https://awnhwjglcr.cloudimg.io/cansariyar.com/works/demo-wp/wp-content/uploads/2022/06/img-04.jpg?force_format=webp&w=571&h=478" alt="Request an Treatment." className="w-full rounded-tr-md rounded-br-md" />
+                    <Image src="https://awnhwjglcr.cloudimg.io/cansariyar.com/works/demo-wp/wp-content/uploads/2022/06/img-04.jpg?force_format=webp&w=571&h=478" width="571" height="478" alt="Request an Treatment." className="w-full rounded-tr-md rounded-br-md" />
                 </div>
             </div>
         </section>
