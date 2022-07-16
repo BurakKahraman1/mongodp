@@ -11,55 +11,6 @@ export default function Home({mData}) {
             <title>{mData.companyName}</title>
         </Head>
         <Header/>
-        <div className="flex flex-wrap ">
-            <div className="lg:w-full pr-4 pl-4">
-                <div className="banner-one">
-                    <div className="flex flex-wrap ">
-                        <div className="lg:w-2/5 pr-4 pl-4">
-                            <h3>The Best Doctors In The <span>World</span> Are Here</h3>
-                            <p>Discover great doctors all over the world. Learn about their abilities and experience. Health is too important to be left to chance.</p>
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                    <g id="doctor-bag" transform="translate(-2 -2)">
-                                        <path id="Path_28194" data-name="Path 28194" d="M14,2H10A3,3,0,0,0,7,5V6H5A3,3,0,0,0,2,9V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V9a3,3,0,0,0-3-3H17V5a3,3,0,0,0-3-3ZM9,5a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1V6H9ZM20,9V19a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9A1,1,0,0,1,5,8H19A1,1,0,0,1,20,9Z" fill="#21b37e"></path>
-                                        <path id="Path_28195" data-name="Path 28195" d="M13,11H11v2H9v2h2v2h2V15h2V13H13Z" fill="#21b37e"></path>
-                                    </g>
-                                </svg>
-                                Discovery Doctors
-                            </a>
-                        </div>
-                        <div className="lg:w-3/5 pr-4 pl-4">
-                            <img src="assets/img/smiling-medical-doctor-woman-with-stethoscope.png" alt="" width="678" height="555" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="lg:w-1/2 pr-4 pl-4">
-                <div className="banner-news">
-                    <div className="bn-header">
-                        <img src="assets/img/whycliniqfinder.png" alt="" />
-                    </div>
-                    <div className="bn-detail">
-                        <h5><a href="#">Why <span>Health Monde</span></a></h5>
-                        <p>Meet with Turkey’s largest healthcare group. Exclusive service, Latest technology treatment methods. At your service in 20 cities. Health Monde offers you the best price guarantee.</p>
-                    </div>
-                </div>
-            </div>
-            <div className="lg:w-1/2 pr-4 pl-4">
-                <div className="banner-news">
-                    <div className="bn-header">
-                        <img src="assets/img/physician-telemed.png" alt="" width="650" height="292" />
-                    </div>
-                    <div className="bn-detail">
-                        <h5><a href="#">How its Work ?</a></h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                            ea rebum. Stet clita kasd gubergren, no sea takimata
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <section className="Slider relative w-full h-[600px] bg-top bg-cover bg-no-repeat bg-[url('https://awnhwjglcr.cloudimg.io/cansariyar.com/works/demo-wp/wp-content/uploads/2022/06/bg-01.jpg?force_format=webp&w=1920&h=600')]">
             <div
                 className="container mx-auto z-10 relative h-full flex flex-col justify-end sm:justify-center pb-10 px-10">
