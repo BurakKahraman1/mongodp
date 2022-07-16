@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: false,
+  optimizeFonts:true,
   /**useFileSystemPublicRoutes: false,*/
   images: {
     domains: [
