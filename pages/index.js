@@ -139,7 +139,8 @@ export default function Home({mData}) {
                     480: { slidesPerView: 2, spaceBetween: 20 },
                     768: { slidesPerView: 2, spaceBetween: 20},
                     980: { slidesPerView: 3, spaceBetween: 20 },
-                    1280: { slidesPerView: 5, spaceBetween: 20 } }
+                    1280: { slidesPerView: 5, spaceBetween: 20 }
+                }
             }>
             <SwiperSlide>
                 <div style={{height:'350px'}} className="procedures rounded relative bg-cover bg-[url('https://awnhwjglcr.cloudimg.io/cansariyar.com/works/demo-wp/wp-content/uploads/2022/06/rhinoplasty.jpg?force_format=webp&w=350&h=350')]">
