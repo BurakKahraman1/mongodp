@@ -28,10 +28,10 @@ export default function Index({mData,posts,currentPageNo}) {
                         <div className="flex flex-col md:grid md:grid-cols-3 xl:grid-cols-4 md:gap-5 h-fit">
                             {nodes.map((post) => (
                                 <div className="postCard basis-1/4 flex flex-col mb-5 rounded-2xl shadow-hmDefault hover:shadow-hmDefaultHover transition ease-in" key={post.postId}>
-                                    <div className="w-full h-[200px]">
+                                    <div className="w-full h-[200px] relative">
                                         <Link href={"/post/"+post.slug}>
-                                            <a>
-                                                {post.featuredImage != null && <Image src={post.featuredImage.node.mediaItemUrl+"?force_format=webp&w=300&h=200"} alt={post.title} title={post.title} width="300" height="200" className="object-cover w-full h-[200px] rounded-tl-2xl rounded-tr-2xl" />}
+                                            <a className="flex h-[200px]">
+                                                {post.featuredImage != null && <Image src={post.featuredImage.node.mediaItemUrl+"?force_format=webp&w=640&h=480"} alt={post.title} title={post.title} layout="fill" objectFit="cover" className="rounded-tl-2xl rounded-tr-2xl" />}
                                                 {post.featuredImage == null && <Image src="https://dummyimage.com/300x200/ffffff/000000&text=No+Image" alt={post.title} title={post.title} width="300" height="200" className="object-cover w-full  h-[200px] rounded-tl-2xl rounded-tr-2xl" />}
                                             </a>
                                         </Link>
