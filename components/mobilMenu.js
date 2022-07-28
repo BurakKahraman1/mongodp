@@ -2,12 +2,15 @@ import Link from "next/link";
 
 export default function MobilModal() {
     function handleClick() {
-        console.log('increment like count');
+        document.querySelector('#m-Modal').classList.add('hidden')
+    }
+    let openModal=()=>{
+        document.querySelector("#m-Modal").classList.remove('hidden')
     }
     return (
         <div>
-            <input type="checkbox" id="MobilModal" className="modal-toggle" />
-            <label htmlFor="MobilModal" className="modal">
+            <input onClick={openModal} type="checkbox" id="MobilModal" className="modal-toggle" />
+            <label htmlFor="MobilModal" id="m-Modal" className="modal">
                 <div className="flex flex-col w-full h-screen relative bg-white md:rounded-lg shadow">
                     <div className="w-full border-b flex flex-row justify-between px-3 items-center h-fit py-4">
                         <Link href="/" className="normal-case text-xl">
