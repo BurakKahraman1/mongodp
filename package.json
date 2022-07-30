@@ -20,9 +20,11 @@
     "next": "12.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.2",
     "react-instantsearch-dom": "^6.30.1",
     "react-instantsearch-hooks-web": "^6.30.1",
     "react-moment": "^1.1.2",
+    "sass": "^1.54.0",
     "swiper": "^8.3.0"
   },
   "devDependencies": {

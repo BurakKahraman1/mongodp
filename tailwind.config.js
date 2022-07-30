@@ -29,10 +29,8 @@ module.exports = {
       boxShadow : {
         hmDefault : '0px 12px 22px 0px rgb(43 45 64 / 7%)',
         hmDefaultHover : '0px 12px 22px 0px rgb(43 45 64 / 14%)',
+        hmGreen : '0 8px 22px rgb(33 179 126 / 10%)',
       },
-      top: {
-        'rightMenuTop': '200px'
-      }
     },
   },
   plugins: [
