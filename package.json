@@ -11,7 +11,6 @@
   "dependencies": {
     "@analytics/google-tag-manager": "^0.5.2",
     "@apollo/client": "^3.6.9",
-    "@docsearch/react": "^3.1.1",
     "algoliasearch": "^4.13.1",
     "analytics": "^0.8.1",
     "daisyui": "^2.18.1",
@@ -24,6 +23,7 @@
     "react-instantsearch-dom": "^6.30.1",
     "react-instantsearch-hooks-web": "^6.30.1",
     "react-moment": "^1.1.2",
+    "react-wizard-form": "^2.1.1",
     "sass": "^1.54.0",
     "swiper": "^8.3.0"
   },

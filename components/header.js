@@ -1,4 +1,3 @@
-import '@docsearch/css';
 import Link from "next/link";
 import ContactModal from "./contact";
 import SearchModal from "./search";

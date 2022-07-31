@@ -1,13 +1,14 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import '../styles/globals.css'
+
 import Head from "next/head";
 import Script from "next/script";
 import {useEffect} from "react";
 import {useRouter} from "next/router";
 import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client";
-import {GTM_ID, pageview} from "../lib/gtm";
-import siteMetaData from "../data/siteMetaData";
+import {GTM_ID, pageview} from "../_services/gtm";
+import siteMetaData from "../_services/siteMetaData";
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter()
@@ -18,6 +19,7 @@ function MyApp({ Component, pageProps }) {
         }
     }, [router.events])
   return (
+
       <ApolloProvider client={client}>
           <section>
               <Head>
