@@ -22,5 +22,24 @@
         background-color: #fff;
       }
     }
+    .accounttype {
+      input {
+        display: none;
+      }
+      label {
+        cursor: pointer;
+        & span {
+          color:#2b2d42;
+        }
+      }
+      > input:checked + label {
+        background-color: #21b37e;
+        border-color:#fff;
+        color: #fff;
+        & span {
+          color: #FFF;
+        }
+      }
+    }
   }
 }
