@@ -10,9 +10,15 @@ import { useStateMachine } from "little-state-machine";
 import Image from "next/image";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
 import styles from '../styles/spsf.module.scss';
+import Alert from "../components/sweetAlert2/Alert";
 
 export default function Spsf({mData}) {
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
+    const [error, setError] = useState('');
+    const [message, setMessage] = useState('');
 
     const {getRootProps, getInputProps} = useDropzone({
         maxFiles:1,
@@ -28,6 +34,18 @@ export default function Spsf({mData}) {
 
     const router = useRouter();
     const formStep = router.query.step ?? 0;
+    const handlePost = async (formData) => {
+        let response = await fetch('/api/hospital', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+        });
+        let data = await response.json();
+        if (data.success) {
+            return setMessage(data.message);
+        } else {
+            return setError(data.message);
+        }
+    };
     const onSubmit = (data) => {
         actions.updateAction(data);
         if(formStep == 0){
@@ -36,8 +54,11 @@ export default function Spsf({mData}) {
             router.push(`?step=2`);
         }else if(formStep == 2){
             router.push(`?step=3`);
+        }else if(formStep == 3){
+            handlePost(state)
         }
     };
+
 
     const goToStep = (step) => {
         router.push(`?step=${step}`);
@@ -311,10 +332,26 @@ export default function Spsf({mData}) {
                                 <span className="w-full text-center text-hmDark text-xl font-bold">Result</span>
                                 <span className="border-b border-hmDark/10 w-5/6"></span>
                             </div>
+                            {error ? (
+                                <h3>{error}</h3>
+                            ) : null}
+                            {message ? (
+                                <div className="flex flex-col justify-center">
+                                    <div className={styles.sa}>
+                                        <div className="sa-success">
+                                            <div className="sa-success-tip"></div>
+                                            <div className="sa-success-long"></div>
+                                            <div className="sa-success-placeholder"></div>
+                                            <div className="sa-success-fix"></div>
+                                        </div>
+                                    </div>
+                                    <h3 className="text-center text-lg text-hmGreen font-bold my-5">{message}</h3>
+                                </div>
+                            ) : null}
                             <pre>{JSON.stringify(state, null, 2)}</pre>
                             <div className="flex justify-between">
                                 <button onClick={() => goToStep(formStep-1)} className="w-full md:w-auto px-10 py-2 rounded bg-hmDark text-white font-medium hover:shadow-hmDark transition ease-in" type="button" >Previous</button>
-
+                                <button className="w-full md:w-auto px-10 py-2 rounded bg-hmGreen text-white font-medium hover:shadow-hmGreen transition ease-in" type="submit">Submit</button>
                             </div>
                         </div>
 
