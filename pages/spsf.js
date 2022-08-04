@@ -268,16 +268,17 @@ export default function Spsf({mData}) {
                                         inputStyle={{
                                             width: "100%",
                                             height: "40px",
-                                            border:0
+                                            border:0,
                                         }}
                                         buttonStyle={{
-                                            backgroundColor:"#FFF",
-                                            border:0
+                                            border:0,
+                                            backgroundColor:'transparent'
                                         }}
                                         searchStyle={{
                                             height: "40px",
                                             border:0
                                         }}
+                                        inputClass={"text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"}
                                         enableSearch={"true"}
                                         country={"us"}
                                         value="1425652"
