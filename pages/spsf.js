@@ -277,7 +277,6 @@ export default function Spsf({mData}) {
                                 <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                     <label className="text-hmsectionTitle mb-2">Mobile Phone</label>
                                     <PhoneInput
-                                        required
                                         containerClass={"react-tel-input2"}
                                         inputStyle={{
                                             width: "100%",
@@ -299,7 +298,7 @@ export default function Spsf({mData}) {
                                 </div>
                                 <div className="flex flex-col w-full">
                                     <label className="text-hmsectionTitle mb-2">E-mail</label>
-                                    <input required   {...register("personemail")} defaultValue={state.personemail} type="email" required placeholder="E-mail" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                    <input required  {...register("personemail")} defaultValue={state.personemail} type="email" placeholder="E-mail" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                 </div>
                             </div>
                             <div className="flex justify-between">
