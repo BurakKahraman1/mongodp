@@ -3,7 +3,7 @@ import {Menu, Transition} from '@headlessui/react'
 import {useRouter} from "next/router";
 import Head from 'next/head'
 import Header from "../components/header";
-import Footer from "../components/footer";
+import PartnerFooter from "../components/partnerFooter";
 import {useDropzone} from 'react-dropzone';
 import updateAction from "../_helpers/updateAction";
 import { useForm } from "react-hook-form";
@@ -105,7 +105,7 @@ export default function Spsf({mData}) {
     }
 
     return (
-        <section className="relative">
+        <section className="relative min-h-screen">
             <Head>
                 <title>Service provider submission form | {mData.companyName}</title>
             </Head>
@@ -113,7 +113,7 @@ export default function Spsf({mData}) {
             <section className="pageHeader min-h-[250px] flex flex-row justify-center items-end bg-hmfooterBg mb-5">
                 <h3 className="text-center my-10 py-0 md:py-5 font-semibold text-4xl text-hmGreen ">Service provider submission form</h3>
             </section>
-            <div className={styles.Spsf+" container mx-auto px-2.5"}>
+            <div className={styles.Spsf+" container mx-auto px-2.5 mb-40"}>
                 {formStep >= 1 &&
                     <div className="flex flex-row justify-center mb-4">
                         {state.accounttype == "advertising-agency" &&
@@ -486,7 +486,7 @@ export default function Spsf({mData}) {
                     )}
                 </form>
             </div>
-            <Footer />
+            <PartnerFooter />
         </section>
     )
 }
