@@ -98,6 +98,19 @@ export default function Spsf({mData}) {
         { id: 2, name: 'Doctor Details' },
         { id: 3, name: 'Result' }
     ]
+    const services = [
+        { id: 0, name: 'Service 01' },
+        { id: 1, name: 'Service 02' },
+        { id: 2, name: 'Service 03' },
+        { id: 3, name: 'Service 04' },
+        { id: 4, name: 'Service 05' },
+        { id: 5, name: 'Service 06' },
+        { id: 6, name: 'Service 07' },
+        { id: 7, name: 'Service 08' },
+        { id: 8, name: 'Service 09' },
+        { id: 9, name: 'Service 10' },
+        { id: 10, name: 'Service 11' },
+    ]
     const [phoneState, setPhoneState] = useState()
     const [startDate, setStartDate] = useState(new Date());
     function classNames(...classes) {
@@ -253,17 +266,18 @@ export default function Spsf({mData}) {
                             <div className="flex flex-col md:flex-row mb-5">
                                 <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                     <label className="text-hmsectionTitle mb-2">Name</label>
-                                    <input {...register("personname")} defaultValue={state.personname} type="text" placeholder="Name" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                    <input required {...register("personname")} defaultValue={state.personname} type="text" placeholder="Name" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                 </div>
                                 <div className="flex flex-col w-full">
                                     <label className="text-hmsectionTitle mb-2">Surname</label>
-                                    <input {...register("personsurname")} defaultValue={state.personsurname} type="text" placeholder="Surname" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                    <input required {...register("personsurname")} defaultValue={state.personsurname} type="text" placeholder="Surname" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                 </div>
                             </div>
                             <div className="flex flex-col md:flex-row mb-5">
                                 <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
-                                    <label className="text-hmsectionTitle mb-2">Phone</label>
+                                    <label className="text-hmsectionTitle mb-2">Mobile Phone</label>
                                     <PhoneInput
+                                        required
                                         containerClass={"react-tel-input2"}
                                         inputStyle={{
                                             width: "100%",
@@ -281,12 +295,11 @@ export default function Spsf({mData}) {
                                         inputClass={"text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"}
                                         enableSearch={"true"}
                                         country={"tr"}
-                                        onChange={phone => console.log({ phone })}
                                     />
                                 </div>
                                 <div className="flex flex-col w-full">
                                     <label className="text-hmsectionTitle mb-2">E-mail</label>
-                                    <input {...register("personemail")} defaultValue={state.personemail} type="text" placeholder="E-mail" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                    <input required   {...register("personemail")} defaultValue={state.personemail} type="email" required placeholder="E-mail" className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                 </div>
                             </div>
                             <div className="flex justify-between">
@@ -306,35 +319,23 @@ export default function Spsf({mData}) {
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="flex flex-col w-full mb-5">
-                                            <label className="text-hmsectionTitle mb-2">Agency Logo</label>
-                                            <div className="flex flex-col p-4 text-center text-md border border-dashed border-gray-300 justify-center items-center bg-white text-hmsectionTitle text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in rounded" {...getRootProps()}>
-                                                <input {...getInputProps()} />
-                                                <p className="">Drag `n drop some files here, or click to select files</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col w-full mb-5">
                                             <label className="text-hmsectionTitle mb-2">Agency Name</label>
-                                            <input type="text" {...register("agencyname")} defaultValue={state.agencyname} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                            <input required type="text" {...register("agencyname")} defaultValue={state.agencyname} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                         </div>
                                         <div className="flex flex-col w-full mb-5">
                                             <label className="text-hmsectionTitle mb-2">Agency Adress</label>
-                                            <input type="text" {...register("agencyadress")} defaultValue={state.agencyadress} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                            <input required type="text" {...register("agencyadress")} defaultValue={state.agencyadress} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                         </div>
-                                        <div className="flex flex-col md:flex-row mb-5">
-                                            <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
-                                                <label className="text-hmsectionTitle mb-2">Phone</label>
-                                                <input type="text" {...register("agencyphone")} defaultValue={state.agencyphone} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
-                                            </div>
-                                            <div className="flex flex-col w-full">
-                                                <label className="text-hmsectionTitle mb-2">E-mail</label>
-                                                <input type="text" {...register("agencyemail")} defaultValue={state.agencyemail} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
-                                            </div>
-                                        </div>
-
                                         <div className="flex flex-col md:flex-row mb-5">
                                             <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                                 <label className="text-hmsectionTitle mb-2">Agency Web Site</label>
-                                                <input type="text" {...register("agencywebsite")} defaultValue={state.agencywebsite} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                                <input required
+                                                       type="url"
+                                                       {...register("agencywebsite")} defaultValue={state.agencywebsite}
+                                                       className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"
+                                                       placeholder="https://"
+                                                       pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+                                                />
                                             </div>
                                             <div className="flex flex-col w-full">
                                                 <label className="text-hmsectionTitle mb-2">Year of foundation</label>
@@ -351,8 +352,18 @@ export default function Spsf({mData}) {
                                         </div>
 
                                         <div className="flex flex-col w-full mb-5">
-                                            <label className="text-hmsectionTitle mb-2">Services</label>
-                                            <textarea {...register("agencyservices")} defaultValue={state.agencyservices} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[100px] p-4 rounded" />
+                                            <div className="flex flex-row items-center">
+                                                <label className="text-hmsectionTitle mb-2 mr-5">Services</label>
+                                                <span className="border-b border-hmDark/10 w-full"></span>
+                                            </div>
+                                            <div className="flex flex-row flex-wrap">
+                                                {Object.values(services).map((service) => (
+                                                    <div className={styles.rightcheck+" px-2 py-2 hover:bg-gray-100"} key={service.id}>
+                                                        <input {...register("services[]")} type="radio" value={service.id} id={"service-0"+service.id} />
+                                                        <label htmlFor={"service-0"+service.id}>  <a className="ml-2">{service.name}</a> </label>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -366,35 +377,17 @@ export default function Spsf({mData}) {
                                     </div>
                                     <div className="flex flex-col">
                                         <div className="flex flex-col w-full mb-5">
-                                            <label className="text-hmsectionTitle mb-2">Agency Logo</label>
-                                            <div className="flex flex-col p-4 text-center text-md border border-dashed border-gray-300 justify-center items-center bg-white text-hmsectionTitle text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in rounded" {...getRootProps()}>
-                                                <input {...getInputProps()} />
-                                                <p className="">Drag `n drop some files here, or click to select files</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col w-full mb-5">
                                             <label className="text-hmsectionTitle mb-2">Agency Name</label>
-                                            <input type="text" {...register("agencyname")} defaultValue={state.agencyname} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                            <input required type="text" {...register("agencyname")} defaultValue={state.agencyname} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                         </div>
                                         <div className="flex flex-col w-full mb-5">
                                             <label className="text-hmsectionTitle mb-2">Agency Adress</label>
-                                            <input type="text" {...register("agencyadress")} defaultValue={state.agencyadress} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                            <input required type="text" {...register("agencyadress")} defaultValue={state.agencyadress} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                         </div>
-                                        <div className="flex flex-col md:flex-row mb-5">
-                                            <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
-                                                <label className="text-hmsectionTitle mb-2">Phone</label>
-                                                <input type="text" {...register("agencyphone")} defaultValue={state.agencyphone} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
-                                            </div>
-                                            <div className="flex flex-col w-full">
-                                                <label className="text-hmsectionTitle mb-2">E-mail</label>
-                                                <input type="text" {...register("agencyemail")} defaultValue={state.agencyemail} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
-                                            </div>
-                                        </div>
-
                                         <div className="flex flex-col md:flex-row mb-5">
                                             <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                                 <label className="text-hmsectionTitle mb-2">Agency Web Site</label>
-                                                <input type="text" {...register("agencywebsite")} defaultValue={state.agencywebsite} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                                <input required type="url" {...register("agencywebsite")} defaultValue={state.agencywebsite} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
                                             </div>
                                             <div className="flex flex-col w-full">
                                                 <label className="text-hmsectionTitle mb-2">Year of foundation</label>
@@ -412,7 +405,7 @@ export default function Spsf({mData}) {
 
                                         <div className="flex flex-col w-full mb-5">
                                             <label className="text-hmsectionTitle mb-2">Services</label>
-                                            <textarea {...register("agencyservices")} defaultValue={state.agencyservices} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[100px] p-4 rounded" />
+                                            <textarea required {...register("agencyservices")} defaultValue={state.agencyservices} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[100px] p-4 rounded" />
                                         </div>
                                     </div>
                                 </div>
@@ -434,6 +427,7 @@ export default function Spsf({mData}) {
                                         <span className="border-b border-hmDark/10 w-5/6"></span>
                                     </div>
                                 </div>
+
                             }
                             {state.accounttype == "doctor" &&
                                 <div className="flex flex-col">
