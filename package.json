@@ -11,6 +11,7 @@
   "dependencies": {
     "@analytics/google-tag-manager": "^0.5.2",
     "@apollo/client": "^3.6.9",
+    "@headlessui/react": "^1.6.6",
     "@react-google-maps/api": "^2.12.1",
     "algoliasearch": "^4.13.1",
     "analytics": "^0.8.1",
@@ -28,6 +29,7 @@
     "react-instantsearch-dom": "^6.30.1",
     "react-instantsearch-hooks-web": "^6.30.1",
     "react-moment": "^1.1.2",
+    "react-phone-input-2": "^2.15.1",
     "sass": "^1.54.0",
     "sweetalert2": "^11.4.24",
     "sweetalert2-react-content": "^5.0.2",
