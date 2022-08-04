@@ -264,8 +264,7 @@ export default function Spsf({mData}) {
                                 <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                     <label className="text-hmsectionTitle mb-2">Phone</label>
                                     <PhoneInput
-                                        enableSearchField
-                                        disableSearchIcon
+                                        enableSearch={"true"}
                                         country={"us"}
                                         value="1425652"
                                         onChange={phone => console.log({ phone })}
