@@ -280,7 +280,7 @@ export default function Spsf({mData}) {
                                         }}
                                         inputClass={"text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"}
                                         enableSearch={"true"}
-                                        country={"us"}
+                                        country={"tr"}
                                         onChange={phone => console.log({ phone })}
                                     />
                                 </div>
