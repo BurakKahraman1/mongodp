@@ -264,6 +264,20 @@ export default function Spsf({mData}) {
                                 <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                     <label className="text-hmsectionTitle mb-2">Phone</label>
                                     <PhoneInput
+                                        containerClass={"react-tel-input2"}
+                                        inputStyle={{
+                                            width: "100%",
+                                            height: "40px",
+                                            border:0
+                                        }}
+                                        buttonStyle={{
+                                            backgroundColor:"#FFF",
+                                            border:0
+                                        }}
+                                        searchStyle={{
+                                            height: "40px",
+                                            border:0
+                                        }}
                                         enableSearch={"true"}
                                         country={"us"}
                                         value="1425652"
