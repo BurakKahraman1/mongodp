@@ -328,7 +328,7 @@ export default function Spsf({mData}) {
                                         <div className="flex flex-col md:flex-row mb-5">
                                             <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                                 <label className="text-hmsectionTitle mb-2">Agency Web Site</label>
-                                                <input required
+                                                <input
                                                        type="url"
                                                        {...register("agencywebsite")} defaultValue={state.agencywebsite}
                                                        className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"
@@ -342,7 +342,6 @@ export default function Spsf({mData}) {
                                                     {...register("agencyfoundation")} defaultValue={state.agencyfoundation}
                                                     className="w-full text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"
                                                     selected={startDate}
-                                                    name="agencyfoundation"
                                                     onChange={(date) => setStartDate(date)}
                                                     showYearPicker
                                                     dateFormat="yyyy"
@@ -358,7 +357,7 @@ export default function Spsf({mData}) {
                                             <div className="flex flex-row flex-wrap">
                                                 {Object.values(services).map((service) => (
                                                     <div className={styles.rightcheck+" px-2 py-2 hover:bg-gray-100"} key={service.id}>
-                                                        <input {...register("services[]")} type="radio" value={service.id} id={"service-0"+service.id} />
+                                                        <input {...register("services[]")} type="checkbox" value={service.id} id={"service-0"+service.id} />
                                                         <label htmlFor={"service-0"+service.id}>  <a className="ml-2">{service.name}</a> </label>
                                                     </div>
                                                 ))}
@@ -386,7 +385,13 @@ export default function Spsf({mData}) {
                                         <div className="flex flex-col md:flex-row mb-5">
                                             <div className="flex flex-col w-full mb-5 md:mb-0 lg:mr-5">
                                                 <label className="text-hmsectionTitle mb-2">Agency Web Site</label>
-                                                <input required type="url" {...register("agencywebsite")} defaultValue={state.agencywebsite} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded" />
+                                                <input
+                                                    type="url"
+                                                    {...register("agencywebsite")} defaultValue={state.agencywebsite}
+                                                    className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"
+                                                    placeholder="https://"
+                                                    pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
+                                                />
                                             </div>
                                             <div className="flex flex-col w-full">
                                                 <label className="text-hmsectionTitle mb-2">Year of foundation</label>
@@ -394,7 +399,6 @@ export default function Spsf({mData}) {
                                                     {...register("agencyfoundation")} defaultValue={state.agencyfoundation}
                                                     className="w-full text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[40px] px-4 rounded"
                                                     selected={startDate}
-                                                    name="agencyfoundation"
                                                     onChange={(date) => setStartDate(date)}
                                                     showYearPicker
                                                     dateFormat="yyyy"
@@ -403,8 +407,18 @@ export default function Spsf({mData}) {
                                         </div>
 
                                         <div className="flex flex-col w-full mb-5">
-                                            <label className="text-hmsectionTitle mb-2">Services</label>
-                                            <textarea required {...register("agencyservices")} defaultValue={state.agencyservices} className="text-hmDark text-lg focus:outline-0 focus:ring focus:ring-2 focus:ring-hmGreen transition ease-in h-[100px] p-4 rounded" />
+                                            <div className="flex flex-row items-center">
+                                                <label className="text-hmsectionTitle mb-2 mr-5">Services</label>
+                                                <span className="border-b border-hmDark/10 w-full"></span>
+                                            </div>
+                                            <div className="flex flex-row flex-wrap">
+                                                {Object.values(services).map((service) => (
+                                                    <div className={styles.rightcheck+" px-2 py-2 hover:bg-gray-100"} key={service.id}>
+                                                        <input {...register("services[]")} type="checkbox" value={service.id} id={"service-0"+service.id} />
+                                                        <label htmlFor={"service-0"+service.id}>  <a className="ml-2">{service.name}</a> </label>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
